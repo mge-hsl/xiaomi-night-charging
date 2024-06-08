@@ -1,0 +1,6 @@
+id=xiaomi-night-charging
+name=80% Battery Charge Limit for Snapdragon-based Xiaomi/Redmi/POCO (a.k.a Night Charging)
+version=v1
+versionCode=1
+author=mge-hsl
+description=By default, MIUI/HyperOS does not have the option in the settings (or anywhere in its UI) to limit battery charging, but it also ships with '/sys/class/qcom-battery/night_charging' file, which does that but, there's no way to turn it on out of the box. This is where this module comes in. 
