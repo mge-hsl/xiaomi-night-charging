@@ -20,7 +20,7 @@ By default, the value of that file is "0", which doesn't do anything. When value
 
 It can be accomplished using Terminal/Termux by issuing the command "echo "1" > /sys/class/qcom-battery/night_charging", however whenever the device is unplugged from the charger and/or is rebooted, the file's value gets reverted back to "0", which turns it off. 
 
-To alleviate that, this module not only sets the value of that file to "1", but it also changes its permission to read-only to prevent the system from reverting the value back to "0". Also, this needs to be done whenever the device is rebooted, as the new value and permissions does not persist during reboot. This is where the script (in the module) comes in, by running the commands every time the device is rebooted/starts up, (via service.d).
+To alleviate that, this module not only sets the value of that file to "1", but it also changes its permission to read-only to prevent the system from reverting the value back to "0". Also, this needs to be done whenever the device is booted/rebooted, as the new value and permissions does not persist during reboot. This is where the script (in the module) comes in, by running the commands every time the device is booted/rebooted, (via service.d).
 
 ### Why use this over ACC or other apps?
 
@@ -30,7 +30,7 @@ With apps like Advanced Charging Controller (ACC), it has to be configured and c
   
 This has been tested on a POCO F5 (marble) running both MIUI 14 and Hyper OS 1. It's also been tested on a POCO F6 PRO (vermeer). From my research, Both the Mi 11 (venus) and POCO X3 PRO (Vayu) also has the '/sys/class/qcom-battery/night_charging' file, so anything with that file present, should theoretically work. YMMV.
 
-This may or may not with AOSP-based ROMs. 
+This may or may not work with AOSP-based ROMs. 
 
 ### Installation
 
